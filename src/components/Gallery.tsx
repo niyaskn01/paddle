@@ -1,8 +1,8 @@
 import { useState } from "react";
 import kayaksBeach from "../assets/video1converted.mp4";
-import lakeView from "../assets/video1converted.mp4";
-import kayakAction from "../assets/video1converted.mp4";
-import sunsetKayak from "../assets/video1converted.mp4";
+import lakeView from "../assets/promo1.mp4";
+import kayakAction from "../assets/promo2.mp4";
+import sunsetKayak from "../assets/promo3.mp4";
 
 const Gallery = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
@@ -47,10 +47,11 @@ const Gallery = () => {
           <video
             key={video.src}
             src={video.src}
-            className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500 cursor-pointer"
+            className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500 cursor-pointer rounded-lg"
             onClick={() => setSelectedVideo(video.src)}
             muted
             loop
+            autoPlay   
             playsInline
           />
 ))}
@@ -68,6 +69,7 @@ const Gallery = () => {
           className="w-full h-auto object-contain rounded-lg"
           controls
           autoPlay
+          loop
           muted
         />
         <button
