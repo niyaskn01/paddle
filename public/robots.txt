@@ -1,0 +1,6 @@
+# Allow all search engines to crawl everything
+User-agent: *
+Allow: /
+
+# Tell them where the sitemap is
+Sitemap: https://paddlexkayaking.in/sitemap.xml
