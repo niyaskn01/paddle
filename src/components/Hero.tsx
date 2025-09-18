@@ -37,7 +37,13 @@ const Hero = () => {
           <Button 
             variant="outline" 
             size="lg"
-            className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary text-lg px-8 py-4 font-semibold"
+            className="
+              border-primary 
+              text-primary 
+              hover:bg-primary 
+              hover:text-primary-foreground 
+              text-lg px-8 py-4 font-semibold
+            "
             onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
           >
             Learn More
