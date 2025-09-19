@@ -28,7 +28,7 @@ const Header = () => {
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-primary/95 backdrop-blur-sm shadow-lg"
+          ? "bg-primary/90 backdrop-blur-sm shadow-lg"
           : "bg-transparent"
       }`}
     >
@@ -79,7 +79,7 @@ const Header = () => {
           </div>
 
           {/* Book Now + Hamburger */}
-          <div className="flex items-center space-x-3">
+          <div className="flex justify-center items-center  space-x-3">
             <Button
               variant="default"
               className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold"

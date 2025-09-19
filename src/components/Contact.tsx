@@ -25,6 +25,7 @@ const Contact = () => {
     });
   };
 
+  
   const submitGoogleSheet = async (data: typeof formData) => {
   const dataWithTimestamp = {
     ...data,
@@ -108,7 +109,11 @@ const handleSubmit = async (e: React.FormEvent) => {
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
-          <Card className="border-none shadow-card">
+          <Card className="border-2 
+              border-primary 
+              rounded-lg         
+              p-6               
+              bg-white   shadow-card">
             <CardHeader>
               <CardTitle className="text-2xl font-bold text-foreground">
                 Book Your Kayak Adventure

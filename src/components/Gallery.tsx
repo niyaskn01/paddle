@@ -32,16 +32,6 @@ const Gallery = () => {
 
     // add more videos here to test “Show More”
 
-    {
-      src: kayakAction,
-      alt: "Adventurer paddling through scenic river canyon",
-      title: "Canyon Adventures",
-    },
-    {
-      src: sunsetKayak,
-      alt: "Peaceful sunset kayaking experience",
-      title: "Sunset Paddles",
-    },
   ];
 
   // show first 4 unless showAll = true
