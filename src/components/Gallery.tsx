@@ -84,14 +84,14 @@ const Gallery = () => {
             className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedVideo(null)}
           >
-            <div className="relative w-full max-w-3xl max-h-[80vh]">
+            <div className="relative w-full vh-full max-w-md max-h-screen">
               <video
                 src={selectedVideo}
                 className="w-full h-auto object-contain rounded-lg"
                 controls
                 autoPlay
                 loop
-                muted
+                // muted
               />
               <button
                 className="absolute top-4 right-4 text-white bg-black/50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-black/70 transition-colors"
