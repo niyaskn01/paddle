@@ -5,8 +5,8 @@ import kayakAction from "../assets/promo2.mp4";
 import sunsetKayak from "../assets/promo3.mp4";
 
 const Gallery = () => {
-  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
-  const [showAll, setShowAll] = useState(false); // 👈 state for show more
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const [showAll, setShowAll] = useState(false);
 
   const videos = [
     {
@@ -29,13 +29,25 @@ const Gallery = () => {
       alt: "Peaceful sunset kayaking experience",
       title: "Sunset Paddles",
     },
-
-    // add more videos here to test “Show More”
-
+    // add more videos here
   ];
 
-  // show first 4 unless showAll = true
   const displayedVideos = showAll ? videos : videos.slice(0, 4);
+
+  // handle next/prev
+  const goNext = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (selectedIndex !== null) {
+      setSelectedIndex((selectedIndex + 1) % videos.length); // wrap-around
+    }
+  };
+
+  const goPrev = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (selectedIndex !== null) {
+      setSelectedIndex((selectedIndex - 1 + videos.length) % videos.length);
+    }
+  };
 
   return (
     <section id="gallery" className="py-20 bg-muted/30">
@@ -52,12 +64,12 @@ const Gallery = () => {
 
         {/* Videos Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {displayedVideos.map((video) => (
+          {displayedVideos.map((video, index) => (
             <video
               key={video.src}
               src={video.src}
               className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500 cursor-pointer rounded-lg"
-              onClick={() => setSelectedVideo(video.src)}
+              onClick={() => setSelectedIndex(index)}
               muted
               loop
               autoPlay
@@ -79,28 +91,42 @@ const Gallery = () => {
         )}
 
         {/* Lightbox Modal */}
-        {selectedVideo && (
+        {selectedIndex !== null && (
           <div
             className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
-            onClick={() => setSelectedVideo(null)}
+            onClick={() => setSelectedIndex(null)}
           >
-            <div className="relative w-full vh-full max-w-md max-h-screen">
+            <div className="relative w-full max-w-md max-h-screen">
               <video
-                src={selectedVideo}
+                src={videos[selectedIndex].src}
                 className="w-full h-auto object-contain rounded-lg"
                 controls
                 autoPlay
                 loop
-                // muted
               />
+              {/* Close Button */}
               <button
                 className="absolute top-4 right-4 text-white bg-black/50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-black/70 transition-colors"
                 onClick={(e) => {
                   e.stopPropagation();
-                  setSelectedVideo(null);
+                  setSelectedIndex(null);
                 }}
               >
                 ✕
+              </button>
+
+              {/* Prev / Next Buttons */}
+              <button
+                className="absolute left-2 top-1/2 -translate-y-1/2 text-white bg-black/50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-black/70 transition-colors"
+                onClick={goPrev}
+              >
+                ‹
+              </button>
+              <button
+                className="absolute right-2 top-1/2 -translate-y-1/2 text-white bg-black/50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-black/70 transition-colors"
+                onClick={goNext}
+              >
+                ›
               </button>
             </div>
           </div>
