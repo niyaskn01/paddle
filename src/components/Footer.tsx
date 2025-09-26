@@ -30,8 +30,9 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <h3 className="text-2xl font-bold mb-4">AquaVenture Kayaks</h3>
             <p className="text-primary-foreground/80 mb-6 max-w-md">
-              Your gateway to unforgettable water adventures. Experience the beauty of nature with our premium kayak rentals and expert guidance.
+              Kayaking in Ernakulam made easy — premium rentals and expert guidance for an unforgettable backwater adventure.
             </p>
+
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
                 <a
