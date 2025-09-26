@@ -77,7 +77,7 @@ const handleSubmit = async (e: React.FormEvent) => {
     {
       icon: <MapPin className="h-6 w-6 text-secondary" />,
       title: "Location",
-      details: "mampuzha, Arayankavu, Kerala 682317"
+      details: "mampuzha, Arayankavu, Kerala, Ernakulam 682317"
     },
     {
       icon: <Phone className="h-6 w-6 text-secondary" />,
