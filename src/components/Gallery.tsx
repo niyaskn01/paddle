@@ -3,6 +3,9 @@ import kayaksBeach from "../assets/video1converted.mp4";
 import lakeView from "../assets/promo1.mp4";
 import kayakAction from "../assets/promo2.mp4";
 import sunsetKayak from "../assets/promo3.mp4";
+import churuli from "../assets/churuli.mp4";
+import azadandfrinds from "../assets/azadandfriends.mp4";
+import doorofheaven from "../assets/doorofheaven.mp4";
 
 const Gallery = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -15,7 +18,7 @@ const Gallery = () => {
       title: "Premium Kayak Fleet",
     },
     {
-      src: lakeView,
+      src: churuli,
       alt: "Serene lake surrounded by forests and mountains",
       title: "Crystal Lake Views",
     },
@@ -25,9 +28,24 @@ const Gallery = () => {
       title: "Canyon Adventures",
     },
     {
-      src: sunsetKayak,
+      src: azadandfrinds,
       alt: "Peaceful sunset kayaking experience",
       title: "Sunset Paddles",
+    },
+    {
+      src: sunsetKayak,
+      alt: "Colorful kayaks ready for rental on pristine beach",
+      title: "Premium Kayak Fleet",
+    },
+    {
+      src: lakeView,
+      alt: "Serene lake surrounded by forests and mountains",
+      title: "Crystal Lake Views",
+    },
+    {
+      src: doorofheaven,
+      alt: "Adventurer paddling through scenic river canyon",
+      title: "Canyon Adventures",
     },
     // add more videos here
   ];

@@ -27,16 +27,30 @@ const Contact = () => {
 
   
   const submitGoogleSheet = async (data: typeof formData) => {
+  const now = new Date();
+
+  const formattedDate =
+    now.getDate().toString().padStart(2, "0") + "-" +
+    (now.getMonth() + 1).toString().padStart(2, "0") + "-" +
+    now.getFullYear() + " " +
+    now.getHours().toString().padStart(2, "0") + ":" +
+    now.getMinutes().toString().padStart(2, "0") + ":" +
+    now.getSeconds().toString().padStart(2, "0");
+
   const dataWithTimestamp = {
     ...data,
-    submittedAt: new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }), // adds timestamp
+    submittedAt: formattedDate, // e.g. "01-10-2025 17:20:31"
   };
-  console.log(dataWithTimestamp)
-  return axios.post("https://api.sheetbest.com/sheets/3c96fbae-bcb4-4ea9-8e9f-6a35b33d5b26", dataWithTimestamp, {
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+
+  console.log(dataWithTimestamp);
+
+  return axios.post(
+    "https://api.sheetbest.com/sheets/3c96fbae-bcb4-4ea9-8e9f-6a35b33d5b26",
+    dataWithTimestamp,
+    {
+      headers: { "Content-Type": "application/json" },
+    }
+  );
 };
 
 const handleSubmit = async (e: React.FormEvent) => {
