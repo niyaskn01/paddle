@@ -27,46 +27,28 @@ const Contact = () => {
 
   
   const submitGoogleSheet = async (data: typeof formData) => {
-  const now = new Date();
+  const formBody = new URLSearchParams(data).toString(); // convert to URL encoded
 
-  const formattedDate =
-    now.getDate().toString().padStart(2, "0") + "-" +
-    (now.getMonth() + 1).toString().padStart(2, "0") + "-" +
-    now.getFullYear() + " " +
-    now.getHours().toString().padStart(2, "0") + ":" +
-    now.getMinutes().toString().padStart(2, "0") + ":" +
-    now.getSeconds().toString().padStart(2, "0");
-
-  const dataWithTimestamp = {
-    ...data,
-    submittedAt: formattedDate, // e.g. "01-10-2025 17:20:31"
-  };
-
-  console.log(dataWithTimestamp);
-
-  return axios.post(
-    "https://api.sheetbest.com/sheets/3c96fbae-bcb4-4ea9-8e9f-6a35b33d5b26",
-    dataWithTimestamp,
-    {
-      headers: { "Content-Type": "application/json" },
-    }
-  );
+  return fetch("https://script.google.com/macros/s/AKfycbyx2HpgFTs0nbQBY0d6RR2SmqV-6tPOcJYiPrOc6GOgVTp72cFaJfeXdWC0UTU5iMDv/exec", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    body: formBody
+  });
 };
 
 const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
 
   try {
-    // Submit form data to Google Sheets
-     await submitGoogleSheet(formData);
+    await submitGoogleSheet(formData);
 
-    // Show success toast
     toast({
       title: "Booking Request Received!",
       description: "We'll contact you within 24 hours to confirm your adventure.",
     });
 
-    // Clear form
     setFormData({
       name: "",
       email: "",
@@ -76,9 +58,7 @@ const handleSubmit = async (e: React.FormEvent) => {
       message: ""
     });
 
-
   } catch (error: any) {
-    // Show error toast
     toast({
       title: "Error submitting form",
       description: error.message || "Something went wrong.",
@@ -137,69 +117,79 @@ const handleSubmit = async (e: React.FormEvent) => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                       Full Name *
                     </label>
                     <Input
                       type="text"
                       name="name"
+                      id="name"
                       value={formData.name}
                       onChange={handleInputChange}
                       required
                       className="w-full"
                       placeholder="John Doe"
+                      autoComplete="name"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
+                    <label  htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                       Email *
                     </label>
                     <Input
                       type="email"
                       name="email"
+                      id="email"
                       value={formData.email}
                       onChange={handleInputChange}
                       required
                       className="w-full"
                       placeholder="john@example.com"
+                      autoComplete="email"
                     />
                   </div>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
                       Phone Number
                     </label>
                     <Input
                       type="tel"
                       name="phone"
+                      id="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
                       className="w-full"
                       placeholder="8034235255"
+                      autoComplete="tel"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="date" className="block text-sm font-medium text-foreground mb-2">
                       Preferred Date
                     </label>
                     <Input
                       type="date"
                       name="date"
+                      id="date"
                       value={formData.date}
                       onChange={handleInputChange}
                       className="w-full"
+                      placeholder="Select a date"
+                      autoComplete="off"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="duration" className="block text-sm font-medium text-foreground mb-2">
                     Rental Duration
                   </label>
                   <select
                     name="duration"
+                    id="duration"
                     value={formData.duration}
                     onChange={handleInputChange}
                     className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground"
@@ -211,16 +201,18 @@ const handleSubmit = async (e: React.FormEvent) => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
                     Special Requests or Questions
                   </label>
                   <Textarea
                     name="message"
+                    id="message"
                     value={formData.message}
                     onChange={handleInputChange}
                     className="w-full"
                     rows={4}
                     placeholder="Tell us about your group size, experience level, or any special requirements..."
+                    autoComplete="off"
                   />
                 </div>
 
@@ -280,3 +272,9 @@ const handleSubmit = async (e: React.FormEvent) => {
 };
 
 export default Contact;
+
+
+
+
+
+

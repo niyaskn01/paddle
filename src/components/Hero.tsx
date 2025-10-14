@@ -64,6 +64,14 @@ const Hero = () => {
           <div className="w-1 h-3 bg-primary-foreground rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
+
+      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <div className="w-4 h-4 bg-primary-foreground rounded-full animate-ping"></div>
+      </div> */}
+
+        {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+          <div className="w-8 h-2 bg-gradient-to-r from-primary-foreground via-primary-foreground/50 to-primary-foreground rounded-full animate-wave"></div>
+        </div> */}
     </section>
   );
 };

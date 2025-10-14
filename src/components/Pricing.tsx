@@ -17,7 +17,6 @@ const Pricing = () => {
         "Storage for personal items",
         "Complimentary snacks",
         "Photo opportunities",
-        "breakfast for hungry paddlers",
         "washroom access"
       ],
       popular: false
