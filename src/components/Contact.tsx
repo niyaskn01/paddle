@@ -5,7 +5,6 @@ import { Input } from "../components/ui/input";
 import { Textarea } from "../components/ui/textarea";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { useToast } from "../hooks/use-toast";
-import axios from "axios";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -35,7 +34,7 @@ const Contact = () => {
       "Content-Type": "application/x-www-form-urlencoded"
     },
     body: formBody
-  });
+  });          
 };
 
 const handleSubmit = async (e: React.FormEvent) => {

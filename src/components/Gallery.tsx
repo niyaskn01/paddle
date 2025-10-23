@@ -6,12 +6,27 @@ import sunsetKayak from "../assets/promo3.mp4";
 import churuli from "../assets/churuli.mp4";
 import azadandfrinds from "../assets/azadandfriends.mp4";
 import doorofheaven from "../assets/doorofheaven.mp4";
+import sagar from "../assets/sagar.mp4";
+import pappi1 from "../assets/pappi.mp4";
+import pappipandora from "../assets/pappipandora.mp4";
+
+
 
 const Gallery = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [showAll, setShowAll] = useState(false);
 
   const videos = [
+    {
+      src: pappipandora,
+      alt: "Adventurer paddling through scenic river canyon",
+      title: "Canyon Adventures",
+    },
+    {
+      src: sagar,
+      alt: "Adventurer paddling through scenic river canyon",
+      title: "Canyon Adventures",
+    },
     {
       src: kayaksBeach,
       alt: "Colorful kayaks ready for rental on pristine beach",
@@ -21,6 +36,11 @@ const Gallery = () => {
       src: churuli,
       alt: "Serene lake surrounded by forests and mountains",
       title: "Crystal Lake Views",
+    },
+    {
+      src: pappi1,
+      alt: "Adventurer paddling through scenic river canyon",
+      title: "Canyon Adventures",
     },
     {
       src: kayakAction,
@@ -111,10 +131,10 @@ const Gallery = () => {
         {/* Lightbox Modal */}
         {selectedIndex !== null && (
           <div
-            className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center lg:items-start lg:pt-16 p-4"
             onClick={() => setSelectedIndex(null)}
           >
-            <div className="relative w-full max-w-md max-h-screen">
+            <div className="relative w-full max-w-md max-h-screen lg:max-h-[500px] mx-auto">
               <video
                 src={videos[selectedIndex].src}
                 className="w-full h-auto object-contain rounded-lg"
