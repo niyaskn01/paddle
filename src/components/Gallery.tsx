@@ -21,7 +21,7 @@ const Gallery = () => {
       alt: "Adventurer paddling through scenic river canyon",
       title: "Canyon Adventures",
     },
-    {
+    { 
       src: kayaksBeach,
       alt: "Colorful kayaks ready for rental on pristine beach",
       title: "Premium Kayak Fleet",
