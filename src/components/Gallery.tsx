@@ -6,7 +6,6 @@ import sunsetKayak from "../assets/promo3.mp4";
 import churuli from "../assets/churuli.mp4";
 import azadandfrinds from "../assets/azadandfriends.mp4";
 import doorofheaven from "../assets/doorofheaven.mp4";
-import sagar from "../assets/sagar.mp4";
 import pappi1 from "../assets/pappi.mp4";
 import pappipandora from "../assets/pappipandora.mp4";
 
@@ -19,11 +18,6 @@ const Gallery = () => {
   const videos = [
     {
       src: pappipandora,
-      alt: "Adventurer paddling through scenic river canyon",
-      title: "Canyon Adventures",
-    },
-    {
-      src: sagar,
       alt: "Adventurer paddling through scenic river canyon",
       title: "Canyon Adventures",
     },
