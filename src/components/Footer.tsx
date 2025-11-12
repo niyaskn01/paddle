@@ -28,7 +28,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand & Description */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">AquaVenture Kayaks</h3>
+            <h3 className="text-2xl font-bold mb-4">PaddleX Adventures</h3>
             <p className="text-primary-foreground/80 mb-6 max-w-md">
               Kayaking in Ernakulam made easy — premium rentals and expert guidance for an unforgettable backwater adventure.
             </p>
@@ -75,6 +75,8 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 flex-shrink-0" />
                 <span className="text-sm">+91 80893 52660</span>
+                <span className="text-sm">+91 90745 01735</span>
+                
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 flex-shrink-0" />
