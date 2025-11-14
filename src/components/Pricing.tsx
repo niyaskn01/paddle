@@ -134,7 +134,7 @@ const Pricing = () => {
 
         <div className="text-center mt-12">
           <p className="text-primary-foreground/80 text-sm">
-            Group discounts available for 5+ people • All prices include tax • Cancellation up to 24 hours
+             All prices include tax • Cancellation up to 24 hours
           </p>
         </div>
       </div>
