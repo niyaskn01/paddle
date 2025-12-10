@@ -16,6 +16,7 @@ const Contact = () => {
     message: ""
   });
   const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -39,7 +40,7 @@ const Contact = () => {
 
 const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
-
+setIsLoading(true);
   try {
     await submitGoogleSheet(formData);
 
@@ -63,6 +64,8 @@ const handleSubmit = async (e: React.FormEvent) => {
       description: error.message || "Something went wrong.",
     });
   }
+setIsLoading(false);
+
 };
 
 
@@ -219,8 +222,19 @@ const handleSubmit = async (e: React.FormEvent) => {
                   type="submit"
                   className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-semibold py-3"
                 >
-                  Send Booking Request
+                  {isLoading ? (
+                    <div className="flex items-center gap-2">
+                      <span className="animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full"></span>
+                      Submitting...
+                    </div>
+                  ) : (
+                    "Send Booking Request"
+                  )}
                 </Button>
+
+                <p className="text-sm text-center text-red-600 font-medium">
+                  *To complete your booking, kindly make the advance payment. Our team will verify and confirm your reservation via call.*
+                </p>
               </form>
             </CardContent>
           </Card>
