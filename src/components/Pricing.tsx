@@ -7,7 +7,7 @@ const Pricing = () => {
     {
       title: "Evening Adventure",
       price: "600rs",
-      period: "3 hours",
+      period: "under 3 hours",
       description: "Perfect for sunset paddles and evening explorations",
       features: [
         "Single or tandem kayak",
@@ -24,7 +24,7 @@ const Pricing = () => {
     {
       title: "Morning Explorer",
       price: "600rs",
-      period: "3 hours",
+      period: "under 3 hours",
       description: "Ideal for a refreshing morning paddle and light exploration",
       features: [
        "Single or tandem kayak",
@@ -34,29 +34,28 @@ const Pricing = () => {
         "Storage for personal items",
         "Complimentary snacks",
         "Photo opportunities",
-        "breakfast for hungry paddlers",
         "washroom access"
       ],
       popular: true
     },
-    {
-      title: "Fun And Adventurer",
-      price: "600rs",
-      period: "2-3 hours",
-      description: "The ultimate kayaking experience with access to all waterways",
-      features: [
-        "Single or tandem kayaks for a leisurely ride",
-        "Comfortable seating for relaxing trips",
-        "Scenic routes perfect for photography and reels",
-        "Panoramic views of Kerala Backwaters and forests",
-        "Storage for personal items",
-        "Access to quiet spots for picnics or chilling",
-        "Morning and evening trips for beautiful lighting",
-        "Washroom access at start and end points",
-        "Eco-friendly and peaceful environment"
-      ],
-      popular: false
-    }
+    // {
+    //   title: "Fun And Adventurer",
+    //   price: "600rs",
+    //   period: "2-3 hours",
+    //   description: "The ultimate kayaking experience with access to all waterways",
+    //   features: [
+    //     "Single or tandem kayaks for a leisurely ride",
+    //     "Comfortable seating for relaxing trips",
+    //     "Scenic routes perfect for photography and reels",
+    //     "Panoramic views of Kerala Backwaters and forests",
+    //     "Storage for personal items",
+    //     "Access to quiet spots for picnics or chilling",
+    //     "Morning and evening trips for beautiful lighting",
+    //     "Washroom access at start and end points",
+    //     "Eco-friendly and peaceful environment"
+    //   ],
+    //   popular: false
+    // }
   ];
 
   const scrollToContact = () => {
@@ -78,7 +77,8 @@ const Pricing = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto place-items-center">
+
           {pricingPlans.map((plan, index) => (
             <Card 
               key={index} 
