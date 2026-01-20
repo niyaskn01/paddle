@@ -8,6 +8,12 @@ import azadandfrinds from "../assets/azadandfriends.mp4";
 import doorofheaven from "../assets/doorofheaven.mp4";
 import pappi1 from "../assets/pappi.mp4";
 import pappipandora from "../assets/pappipandora.mp4";
+import burn from "../assets/burn.mp4";
+import burn2 from "../assets/burn2.mp4";
+import burn3 from "../assets/burn3.mp4";
+import burn4 from "../assets/burn4.mp4";
+import burn5 from "../assets/burn5.mp4";
+import burn6 from "../assets/burn6.mp4";
 
 
 
@@ -16,6 +22,33 @@ const Gallery = () => {
   const [showAll, setShowAll] = useState(false);
 
   const videos = [
+    {
+      src: burn,
+      alt: "Adventurer paddling through scenic river canyon",
+      title: "Canyon Adventures",
+    },{
+      src: burn2,
+      alt: "Adventurer paddling through scenic river canyon",
+      title: "Canyon Adventures",
+    },{
+      src: burn3,
+      alt: "Adventurer paddling through scenic river canyon",
+      title: "Canyon Adventures",
+    },{
+      src: burn4,
+      alt: "Adventurer paddling through scenic river canyon",
+      title: "Canyon Adventures",
+    },{
+      src: burn5,
+      alt: "Adventurer paddling through scenic river canyon",
+      title: "Canyon Adventures",
+    },{
+      src: burn6,
+      alt: "Adventurer paddling through scenic river canyon",
+      title: "Canyon Adventures",
+    },
+
+
     {
       src: pappipandora,
       alt: "Adventurer paddling through scenic river canyon",

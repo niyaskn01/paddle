@@ -29,7 +29,14 @@ const Hero = () => {
         <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
           Discover the beauty of Kerala’s backwaters with our premium kayak rentals
           — perfect for beginners and experts alike.
+          <br />
+          <br />
+          <span className="text-accent font-semibold">
+            Perfect for couples, solo explorers, beginners & content creators
+          </span>
+
         </p>
+       
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button

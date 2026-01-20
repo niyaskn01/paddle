@@ -72,9 +72,40 @@ const Pricing = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
             Choose Your Adventure
           </h2>
-          <p className="text-lg text-primary-foreground/90 max-w-2xl mx-auto">
-            Flexible pricing options to match your schedule and adventure level. All rentals include premium equipment and safety gear.
-          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto text-left text-primary-foreground/90">
+  <div className="flex items-start gap-3 bg-white/10 backdrop-blur-sm p-4 rounded-xl">
+    <span className="text-2xl">🌿</span>
+    <p>
+      <span className="font-semibold">Mini Amazon Forest Experience</span><br />
+      Paddle through lush green canals surrounded by dense forest vibes.
+    </p>
+  </div>
+
+  <div className="flex items-start gap-3 bg-white/10 backdrop-blur-sm p-4 rounded-xl">
+    <span className="text-2xl">🍁</span>
+    <p>
+      <span className="font-semibold">Picturesque Village Landscapes</span><br />
+      Traditional Kerala village views perfect for photos and reels.
+    </p>
+  </div>
+
+  <div className="flex items-start gap-3 bg-white/10 backdrop-blur-sm p-4 rounded-xl">
+    <span className="text-2xl">🌞</span>
+    <p>
+      <span className="font-semibold">Sunrise & Sunset Magic</span><br />
+      Golden-hour kayaking with stunning natural light.
+    </p>
+  </div>
+
+  <div className="flex items-start gap-3 bg-white/10 backdrop-blur-sm p-4 rounded-xl">
+    <span className="text-2xl">😇</span>
+    <p>
+      <span className="font-semibold">Serene & Crowd-Free</span><br />
+      Calm waters, peaceful surroundings, and no tourist rush.
+    </p>
+  </div>
+</div>
+
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto place-items-center">
