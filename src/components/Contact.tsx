@@ -78,7 +78,7 @@ setIsLoading(false);
     {
       icon: <Phone className="h-6 w-6 text-secondary" />,
       title: "Phone",
-      details: "+91 80893 52660" + "\n" + "+91 90745 01735"},
+      details: "+91 80893 52660" + "\n" + "+91 8281949895"},
     {
       icon: <Mail className="h-6 w-6 text-secondary" />,
       title: "Email",
