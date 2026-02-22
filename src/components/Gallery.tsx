@@ -1,12 +1,6 @@
 import { useState } from "react";
 import kayaksBeach from "../assets/video1converted.mp4";
-import lakeView from "../assets/promo1.mp4";
-import kayakAction from "../assets/promo2.mp4";
-import sunsetKayak from "../assets/promo3.mp4";
 import churuli from "../assets/churuli.mp4";
-import azadandfrinds from "../assets/azadandfriends.mp4";
-import doorofheaven from "../assets/doorofheaven.mp4";
-import pappi1 from "../assets/pappi.mp4";
 import pappipandora from "../assets/pappipandora.mp4";
 import burn from "../assets/burn.mp4";
 import burn2 from "../assets/burn2.mp4";
@@ -63,36 +57,6 @@ const Gallery = () => {
       src: churuli,
       alt: "Serene lake surrounded by forests and mountains",
       title: "Crystal Lake Views",
-    },
-    {
-      src: pappi1,
-      alt: "Adventurer paddling through scenic river canyon",
-      title: "Canyon Adventures and the excitement",
-    },
-    {
-      src: kayakAction,
-      alt: "Adventurer paddling through scenic river canyon",
-      title: "Canyon Adventures",
-    },
-    {
-      src: azadandfrinds,
-      alt: "Peaceful sunset kayaking experience",
-      title: "Sunset Paddles",
-    },
-    {
-      src: sunsetKayak,
-      alt: "Colorful kayaks ready for rental on pristine beach",
-      title: "Premium Kayak Fleet",
-    },
-    {
-      src: lakeView,
-      alt: "Serene lake surrounded by forests and mountains",
-      title: "Crystal Lake Views",
-    },
-    {
-      src: doorofheaven,
-      alt: "Adventurer paddling through scenic river canyon",
-      title: "Canyon Adventures",
     },
     // add more videos here
   ];
