@@ -73,7 +73,7 @@ setIsLoading(false);
     {
       icon: <MapPin className="h-6 w-6 text-secondary" />,
       title: "Location",
-      details: "mampuzha, Arayankavu, Kerala, Ernakulam 682317"
+      details: "Kattikkunnu, Poothotta, Kerala, Ernakulam 686608"
     },
     {
       icon: <Phone className="h-6 w-6 text-secondary" />,

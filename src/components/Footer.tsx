@@ -70,7 +70,7 @@ const Footer = () => {
             <div className="space-y-3 text-primary-foreground/80">
               <div className="flex items-center space-x-3">
                 <MapPin className="h-4 w-4 flex-shrink-0" />
-                <span className="text-sm">Mambuzha<br />Arayankavu, kerala 682317</span>
+                <span className="text-sm">Kattikkunnu ,Poothotta<br />Ernakulam, kerala 686608</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 flex-shrink-0" />
