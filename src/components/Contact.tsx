@@ -73,7 +73,7 @@ setIsLoading(false);
     {
       icon: <MapPin className="h-6 w-6 text-secondary" />,
       title: "Location",
-      details: "Kattikkunnu, Poothotta, Kerala, Ernakulam 686608"
+      details: "near panackal Devi kshethram, Kattikkunnu, Kattikunnu, Kerala 686608"
     },
     {
       icon: <Phone className="h-6 w-6 text-secondary" />,
