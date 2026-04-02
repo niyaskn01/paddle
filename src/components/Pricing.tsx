@@ -7,7 +7,7 @@ const Pricing = () => {
     {
       title: "Evening Adventure",
       price: "600rs",
-      period: "under 3 hours",
+      period: "2 hours",
       description: "Perfect for sunset paddles and evening explorations",
       features: [
         "Single or tandem kayak",
@@ -24,7 +24,7 @@ const Pricing = () => {
     {
       title: "Morning Explorer",
       price: "600rs",
-      period: "under 3 hours",
+      period: "2 hours",
       description: "Ideal for a refreshing morning paddle and light exploration",
       features: [
        "Single or tandem kayak",
