@@ -38,24 +38,24 @@ const Pricing = () => {
       ],
       popular: true
     },
-    // {
-    //   title: "Fun And Adventurer",
-    //   price: "600rs",
-    //   period: "2-3 hours",
-    //   description: "The ultimate kayaking experience with access to all waterways",
-    //   features: [
-    //     "Single or tandem kayaks for a leisurely ride",
-    //     "Comfortable seating for relaxing trips",
-    //     "Scenic routes perfect for photography and reels",
-    //     "Panoramic views of Kerala Backwaters and forests",
-    //     "Storage for personal items",
-    //     "Access to quiet spots for picnics or chilling",
-    //     "Morning and evening trips for beautiful lighting",
-    //     "Washroom access at start and end points",
-    //     "Eco-friendly and peaceful environment"
-    //   ],
-    //   popular: false
-    // }
+    {
+      title: "Daytime Escape",
+      price: "600rs",
+      period: "2 hours",
+      description: "Perfect for relaxed paddling, daylight exploration & peaceful backwater moments",
+      features: [
+        "Single or tandem kayak options",
+        "Premium kayaks & gear",
+        "All safety equipment included",
+        "Easy route guidance for smooth navigation",
+        "Storage for personal items",
+        "Complimentary light refreshments",
+        "Photo-friendly natural spots",
+        "Washroom access at start and end points",
+        "Eco-friendly and peaceful environment"
+      ],
+      popular: false
+    }
   ];
 
   const scrollToContact = () => {
@@ -108,15 +108,15 @@ const Pricing = () => {
 
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto place-items-center">
+        <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto items-stretch">
 
           {pricingPlans.map((plan, index) => (
             <Card 
-              key={index} 
-              className={`relative text-center border-none shadow-card hover:shadow-xl transition-all duration-300 ${
-                plan.popular ? 'ring-2 ring-accent scale-105' : ''
-              }`}
-            >
+  key={index} 
+  className={`relative text-center border-none shadow-card hover:shadow-xl transition-all duration-300 h-full flex flex-col ${
+    plan.popular ? 'ring-2 ring-accent scale-105' : ''
+  }`} 
+>
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-accent text-accent-foreground px-4 py-2 rounded-full text-sm font-semibold">
@@ -138,7 +138,7 @@ const Pricing = () => {
                 </p>
               </CardHeader>
               
-              <CardContent className="pt-0">
+              <CardContent className="pt-0 flex flex-col flex-1">
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm">
