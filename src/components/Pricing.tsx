@@ -21,23 +21,7 @@ const Pricing = () => {
       ],
       popular: false
     },
-    {
-      title: "Morning Explorer",
-      price: "600rs",
-      period: "2 hours",
-      description: "Ideal for a refreshing morning paddle and light exploration",
-      features: [
-       "Single or tandem kayak",
-        "Premium kayaks & gear",
-        "All safety equipment",
-        "Detailed route map",
-        "Storage for personal items",
-        "Complimentary snacks",
-        "Photo opportunities",
-        "washroom access"
-      ],
-      popular: true
-    },
+    
     {
       title: "Daytime Escape",
       price: "600rs",
@@ -54,8 +38,25 @@ const Pricing = () => {
         "Washroom access at start and end points",
         "Eco-friendly and peaceful environment"
       ],
+      popular: true
+    },
+    {
+      title: "Morning Explorer",
+      price: "600rs",
+      period: "2 hours",
+      description: "Ideal for a refreshing morning paddle and light exploration",
+      features: [
+       "Single or tandem kayak",
+        "Premium kayaks & gear",
+        "All safety equipment",
+        "Detailed route map",
+        "Storage for personal items",
+        "Complimentary snacks",
+        "Photo opportunities",
+        "washroom access"
+      ],
       popular: false
-    }
+    },
   ];
 
   const scrollToContact = () => {
@@ -113,9 +114,17 @@ const Pricing = () => {
           {pricingPlans.map((plan, index) => (
             <Card 
   key={index} 
+
+  // normal
+  // className={`relative text-center border-none shadow-card hover:shadow-xl transition-all duration-300 h-full flex flex-col ${
+  //   plan.popular ? 'ring-2 ring-accent scale-105' : ''
+  // }`} 
+
   className={`relative text-center border-none shadow-card hover:shadow-xl transition-all duration-300 h-full flex flex-col ${
-    plan.popular ? 'ring-2 ring-accent scale-105' : ''
-  }`} 
+  plan.popular ? 'ring-2 ring-accent scale-105' : ''
+} ${
+  plan.title === "Evening Adventure" ? 'opacity-70 grayscale' : ''
+}`}
 >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -147,8 +156,8 @@ const Pricing = () => {
                     </li>
                   ))}
                 </ul>
-                
-                <Button 
+                {/* //need to disable evening adventure booking button */}
+                {/* <Button 
                   className={`w-full font-semibold ${
                     plan.popular 
                       ? 'bg-accent text-accent-foreground hover:bg-accent/90' 
@@ -157,7 +166,26 @@ const Pricing = () => {
                   onClick={scrollToContact}
                 >
                   Book {plan.title}
-                </Button>
+                </Button> */}
+                {plan.title === "Evening Adventure" ? (
+                  <Button
+                    disabled
+                    className="w-full font-semibold bg-muted text-muted-foreground cursor-not-allowed"
+                  >
+                    Currently Closed
+                  </Button>
+                ) : (
+                  <Button
+                    className={`w-full font-semibold ${
+                      plan.popular
+                        ? "bg-accent text-accent-foreground hover:bg-accent/90"
+                        : "bg-secondary text-secondary-foreground hover:bg-secondary/90"
+                    }`}
+                    onClick={scrollToContact}
+                  >
+                    Book {plan.title}
+                  </Button>
+                )}
               </CardContent>
             </Card>
           ))}

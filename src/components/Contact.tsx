@@ -199,6 +199,7 @@ setIsLoading(false);
                     <option value="">Select Slot</option>
                     <option value="morning">Morning </option>
                     <option value="evening">Evening </option>
+                    <option value="10 am">10 am (flexible) </option>
                   </select>
                 </div>
 
