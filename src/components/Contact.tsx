@@ -29,7 +29,7 @@ const Contact = () => {
   const submitGoogleSheet = async (data: typeof formData) => {
   const formBody = new URLSearchParams(data).toString(); // convert to URL encoded
 
-  return fetch("https://script.google.com/macros/s/AKfycbyx2HpgFTs0nbQBY0d6RR2SmqV-6tPOcJYiPrOc6GOgVTp72cFaJfeXdWC0UTU5iMDv/exec", {
+  return fetch("https://script.google.com/macros/s/AKfycbx5xDCoYLsDKJnQ48_FOi2S9w7nShIusnAV9C1mIhEPJwmE-fyemsuJ8gkGARb6n9F2/exec", {
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded"

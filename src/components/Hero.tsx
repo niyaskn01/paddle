@@ -63,6 +63,7 @@ const Hero = () => {
             Learn More
           </Button>
         </div>
+            
       </div>
 
       {/* Floating scroll indicator */}
