@@ -43,11 +43,7 @@ const handleSubmit = async (e: React.FormEvent) => {
 setIsLoading(true);
   try {
     await submitGoogleSheet(formData);
-<<<<<<< HEAD
-=======
-    const orderMessage = `Hi paddleX, a new form is submitted`
 
->>>>>>> e62d570 (number changed)
 
     toast({
       title: "Booking Request Received!",
@@ -83,11 +79,7 @@ setIsLoading(false);
     {
       icon: <Phone className="h-6 w-6 text-secondary" />,
       title: "Phone",
-<<<<<<< HEAD
-      details: "+91 80893 52660" + "\n" + "+91 8281949895"},
-=======
       details: "+91 9074501735" + "\n" + "+91 8281949895"},
->>>>>>> e62d570 (number changed)
     {
       icon: <Mail className="h-6 w-6 text-secondary" />,
       title: "Email",
