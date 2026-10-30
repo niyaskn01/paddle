@@ -1,18 +1,27 @@
+
 import { Facebook, Instagram, MapPin, Phone, Mail } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: <Facebook className="h-5 w-5" />, href: "https://www.facebook.com/profile.php?id=61578624659000", label: "Facebook" },
-    { icon: <Instagram className="h-5 w-5" />, href: "https://www.instagram.com/paddlexadventures/", label: "Instagram" },
+    {
+      icon: <Facebook className="h-5 w-5" />,
+      href: "https://www.facebook.com/profile.php?id=61578624659000",
+      label: "Facebook",
+    },
+    {
+      icon: <Instagram className="h-5 w-5" />,
+      href: "https://www.instagram.com/paddlexadventures/",
+      label: "Instagram",
+    },
   ];
 
   const quickLinks = [
     { name: "About Us", href: "#about" },
     { name: "Pricing", href: "#pricing" },
     { name: "Gallery", href: "#gallery" },
-    { name: "Contact", href: "#contact" }
+    { name: "Contact", href: "#contact" },
   ];
 
   const scrollToSection = (sectionId: string) => {
@@ -28,9 +37,13 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand & Description */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">PaddleX Adventures</h3>
+            <h3 className="text-2xl font-bold mb-4">
+              PaddleX Adventures
+            </h3>
+
             <p className="text-primary-foreground/80 mb-6 max-w-md">
-              Kayaking in Ernakulam made easy — premium rentals and expert guidance for an unforgettable backwater adventure.
+              Kayaking in Ernakulam made easy — premium rentals and expert
+              guidance for an unforgettable backwater adventure.
             </p>
 
             <div className="flex space-x-4">
@@ -50,6 +63,7 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+
             <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <li key={index}>
@@ -67,24 +81,31 @@ const Footer = () => {
           {/* Contact Info */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Get in Touch</h4>
+
             <div className="space-y-3 text-primary-foreground/80">
               <div className="flex items-center space-x-3">
                 <MapPin className="h-4 w-4 flex-shrink-0" />
-                <span className="text-sm">near panackal Devi kshethram, Kattikkunnu, <br />Kattikunnu, Kerala 686608</span>
+                <span className="text-sm">
+                  near panackal Devi kshethram, Kattikkunnu,
+                  <br />
+                  Kattikunnu, Kerala 686608
+                </span>
               </div>
+
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 flex-shrink-0" />
-<<<<<<< HEAD
-                <span className="text-sm">+91 80893 52660</span>
-=======
-                <span className="text-sm">+91 9074501735</span>
->>>>>>> e62d570 (number changed)
-                <span className="text-sm">+91 82819 49895</span>
-                
+                <div className="flex flex-col">
+                  <span className="text-sm">+91 80893 52660</span>
+                  <span className="text-sm">+91 9074501735</span>
+                  <span className="text-sm">+91 82819 49895</span>
+                </div>
               </div>
+
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 flex-shrink-0" />
-                <span className="text-sm">kayakversekochi@gmail.com</span>
+                <span className="text-sm">
+                  kayakversekochi@gmail.com
+                </span>
               </div>
             </div>
           </div>
@@ -96,14 +117,26 @@ const Footer = () => {
             <p className="text-primary-foreground/60 text-sm">
               © {currentYear} PaddleX Adventures. All rights reserved.
             </p>
+
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-primary-foreground/60 hover:text-accent transition-colors">
+              <a
+                href="#"
+                className="text-primary-foreground/60 hover:text-accent transition-colors"
+              >
                 Privacy Policy
               </a>
-              <a href="#" className="text-primary-foreground/60 hover:text-accent transition-colors">
+
+              <a
+                href="#"
+                className="text-primary-foreground/60 hover:text-accent transition-colors"
+              >
                 Terms of Service
               </a>
-              <a href="#" className="text-primary-foreground/60 hover:text-accent transition-colors">
+
+              <a
+                href="#"
+                className="text-primary-foreground/60 hover:text-accent transition-colors"
+              >
                 Safety Guidelines
               </a>
             </div>
