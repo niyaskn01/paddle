@@ -85,7 +85,7 @@ const Header = () => {
               className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold"
               onClick={() => scrollToSection("contact")}
             >
-              Book Now
+              Requiest a Callback
             </Button>
 
             {/* Mobile menu toggle */}
